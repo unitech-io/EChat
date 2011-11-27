@@ -1,24 +1,39 @@
 
-.aschat {
-    background-color : white;
-    position : fixed;
-    bottom : 0%;
-    right : 10px;
-    
-    height : 300px;
+.echat {
+    position : relative;
+    float : right;
+    height : 320px;
     width : 250px;
+    margin-left : 10px;
     border : 1px solid #CCC;
+    font-family: sans-serif;
+    color: #333;
+    line-height: 1.28;
 }
 
-.aschat #arrival-messages {
-    height : 270px;
-    width : 100%;
+.echat #name {
+    font-size : 13px;
+    font-weight : bold;
+    background-color : #EEE;
+    padding : 3px 0 2px 5px;
     border-bottom : 1px solid #CCC;
-    overflow-y : scroll;
 }
 
-.aschat input {
-    width : 247px;
-    border : 1px solid #AAA;
+.echat #arrival-messages {
+    padding-left : 3px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    height : 270px;
+    width : inherit;
+    border-bottom : 1px solid #CCC;
+    overflow-y : auto;
+    overflow-x : none;
+}
+
+.echat input {
+    width : 245px;
+    border : 0px solid #AAA;
     height : 25px;
+    padding-left : 3px;
 }
