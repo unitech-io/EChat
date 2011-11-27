@@ -1,0 +1,24 @@
+
+.aschat {
+    background-color : white;
+    position : fixed;
+    bottom : 0%;
+    right : 10px;
+    
+    height : 300px;
+    width : 250px;
+    border : 1px solid #CCC;
+}
+
+.aschat #arrival-messages {
+    height : 270px;
+    width : 100%;
+    border-bottom : 1px solid #CCC;
+    overflow-y : scroll;
+}
+
+.aschat input {
+    width : 247px;
+    border : 1px solid #AAA;
+    height : 25px;
+}
