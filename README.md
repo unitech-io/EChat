@@ -6,15 +6,17 @@
 
 ## Conf Ejabberd
 
-* Add user
-`sudo ejabberdctl register admin localhost admin`
+### Add user
+
+    sudo ejabberdctl register admin localhost admin
     
-* Add the admin
-`%% ejabberd.cfg
- %% Admin user
- {acl, admin, {user, "admin", "localhost"}}.`
+### Add the admin
+
+    %% ejabberd.cfg
+    %% Admin user
+    {acl, admin, {user, "admin", "localhost"}}.
     
-* Enable mod_http_bind (BOSH)
+### Enable mod_http_bind (BOSH)
 
     %% ejabberd.cfg
     %%
