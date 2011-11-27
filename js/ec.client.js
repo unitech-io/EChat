@@ -1,4 +1,6 @@
-
+/*
+ * Client instanciation
+ */
 
 EC.Client = function(opt) {
     this.host = opt.host || '/http-bind';
@@ -116,9 +118,9 @@ EC.Client.prototype._onMessage = function (stanza) {
             activity: activity
         };
 
-    // Reset addressing
-    this.jids[bareJid] = fullJid;
-
+    // Reset addressing ????
+    //this.jids[bareJid] = fullJid;
+    
     $.publish('message.client.im', message);
     return true;
 };

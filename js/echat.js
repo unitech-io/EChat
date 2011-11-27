@@ -7,7 +7,16 @@ var echat = new EC({
     password : 'admin2',
     debug : false,
     host : 'http://localhost:8080/http-bind',
-    service : 'admin@localhost'
+    service : [
+	{
+	    name : 'Alyson Galtier',
+	    jid : 'agaltier@localhost'
+	},
+	{
+	    name : 'Francois Assise',
+	    jid : 'admin@localhost'
+	}
+    ]
 });
 
 
