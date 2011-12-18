@@ -26,7 +26,11 @@ EC.Chat = function(client) {
 	chat.appendLocalMessage(msgEl.val());
 	msgEl.val('');
     });
-    
+
+    chat.find('#name').click(function() {
+	chat.find('.echat').css('height','10px');
+    });
+
     chat.getJid = function() {
 	return chat.data('jid');
     };
@@ -36,14 +40,14 @@ EC.Chat = function(client) {
     };
 
     chat.appendRemoteMessage = function(msg) {
-	chat.find('#arrival-messages').append('-- ' + msg + '<br/>');
+	chat.find('#arrival-messages').append('<b>' + client.name + ':</b>&nbsp;&nbsp;' + msg + '<br/>');
     }
 
     chat.appendLocalMessage = function(msg) {
-	chat.find('#arrival-messages').append('++ ' + msg + '<br/>');
+	chat.find('#arrival-messages').append('<b>me:</b>&nbsp;&nbsp;' + msg + '<br/>');
     }
 
-    $('body').append(chat);
+    $('#chat-list').append(chat);
     return chat;
 }
 

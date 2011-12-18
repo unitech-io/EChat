@@ -19,9 +19,7 @@ EC = function(opt) {
     
     this.client = new EC.Client(opt);
     this.client.connect();
-    
-    //this.view = new EC.View(opt);
-    
+        
     this.listen();
 };
 
@@ -34,7 +32,9 @@ EC.prototype.disconnect = function() {
  */
 EC.prototype.renderChats = function() {
     var self = this;
+    
     $(document).ready(function() {
+	$('body').append('<div id="chat-list"></div>');
 	for (var i = 0; i < self.service.length; i++) {
 	    self.chatObjects.push(new EC.Chat(self.service[i]));
 	}    
